@@ -1,6 +1,8 @@
 # Common environment
 export PATH=/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/lib64/jdk/bin:/usr/lib64/jre/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+alias hack="cat /dev/urandom | tr -dc '[a-z][A-Z][0-9]-_!@#$%^&*()_+{}|:?=' | fold -w 100"
+alias vim='gedit'
 
 # Nice highlighting in less
 export LESS_TERMCAP_mb=$'\E[01;31m'
