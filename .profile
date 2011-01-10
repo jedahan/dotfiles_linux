@@ -2,7 +2,7 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/lib64/jdk/bin:/usr/lib64/jre/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 alias hack="cat /dev/urandom | tr -dc '[a-z][A-Z][0-9]-_!@#$%^&*()_+{}|:?=' | fold -w 100"
-alias vim='gedit'
+alias vim='gvim'
 function patcherbo() {
   echo -n '!pq ' | xsel --input
   git commit -a -m $1 && git format-patch HEAD~1 --stdout | ix | xsel --append --input
