@@ -3,6 +3,11 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/lib64/jdk/bin:/usr/lib64/
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 alias hack="cat /dev/urandom | tr -dc '[a-z][A-Z][0-9]-_!@#$%^&*()_+{}|:?=' | fold -w 100"
 alias vim='gedit'
+function patcherbo() {
+  echo -n '!pq ' | xsel --input
+  git commit -a -m $1 && git format-patch HEAD~1 --stdout | ix | xsel --append --input
+  echo -n " ::$2" | xsel --append --input
+}
 
 # Nice highlighting in less
 export LESS_TERMCAP_mb=$'\E[01;31m'
