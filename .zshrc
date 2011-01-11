@@ -2,7 +2,7 @@ export ZSH_THEME="philips"
 plugins=(git gem ruby zsh-syntax-highlighting)
 export ZSH=$HOME/.config/oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-source $HOME/.profile
+unalias sl
 
 # Home End Delete Insert PgUp PgDown
 bindkey "^[[7~" beginning-of-line
@@ -25,5 +25,4 @@ setopt histignoredups
 setopt histignorespace
 setopt interactivecomments
 
-unalias sl
-
+source $HOME/.profile
