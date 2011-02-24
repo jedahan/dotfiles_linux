@@ -26,3 +26,7 @@ setopt histignorespace
 setopt interactivecomments
 
 source $HOME/.profile
+
+function view() {
+  ${EDITOR} /var/db/paludis/repository/installed/data/*${1}/*/*${1}*ex*
+}
